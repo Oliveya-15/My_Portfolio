@@ -75,7 +75,7 @@ function Home() {
               <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4"> {/* Flex container for small and large screens */}
                 {/* Resume Button */}
                 <a
-                  href="https://drive.google.com/drive/folders/1v2uVrYa7PrE51HBsf_40-kODyGy67WgG"
+                  href="https://drive.google.com/file/d/1TxrGrxpKScW5YAQnrvfFhb_fVkhjCJYl/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between bg-gray-300 text-black text-base border-2 border-black py-3 px-5 rounded-xl hover:bg-gray-700 hover:text-white hover:border-gray-200"
