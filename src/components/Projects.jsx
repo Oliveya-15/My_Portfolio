@@ -4,12 +4,20 @@ function Projects() {
   const cardItem = [
     {
       id: 1,
+      logo: "/docify.png", // Path relative to public folder
+      name: "Docify Doctor Appointment Booking App - Frontend",
+      Link: "https://docify-react-tail.onrender.com", 
+      sourceCodeLink: "https://github.com/Oliveya-15/Docify_React_Tail.git", // Example source code link
+      description: "Responsive frontend for doctor appointments using React and Tailwind, with real-time slot booking and login/logout UI.",
+    },
+    /*{
+      id: 1,
       logo: "/mernproject.png", // Path relative to public folder
       name: "BookWook - Book Reading Platform",
       Link: "https://bookwookweb-frontend.onrender.com",
       sourceCodeLink: "https://github.com/Oliveya-15/BookWookWeb.git", // Example source code link
       description: "MERN-based platform for book lovers to read free and paid books online, with login authentication and dark/light mode.",
-    },
+    },*/
     {
       id: 2,
       logo: "/ml.png", // Path relative to public folder
@@ -40,14 +48,6 @@ function Projects() {
   const basicCardItem = [
     {
       id: 5,
-      logo: "/docify.png", // Path relative to public folder
-      name: "Docify Doctor Appointment Booking App - Frontend",
-      Link: "https://docify-react-tail.onrender.com", 
-      sourceCodeLink: "https://github.com/Oliveya-15/Docify_React_Tail.git", // Example source code link
-      description: "Responsive frontend for doctor appointments using React and Tailwind, with real-time slot booking and login/logout UI.",
-    },
-    {
-      id: 6,
       logo: "/gtnthumb.png", // Path relative to public folder
       name: "Game - Guess The Number",
       Link: "https://oliveya-15.github.io/GUESS-THE-NUMBER/", 
@@ -55,7 +55,7 @@ function Projects() {
       description: "Number guessing game built in Python with Tkinter, including voice assistance, hints, timer, levels, and dynamic GUI.",
     },
     {
-      id: 7,
+      id: 6,
       logo: "/amazon.png", // Path relative to public folder
       name: "Amazon Clone - Landing Page",
       Link: "https://amazon-clonesite-html-css.netlify.app/", 
@@ -63,7 +63,6 @@ function Projects() {
       description: "Basic Amazon landing page clone developed with HTML and CSS, showcasing for fundamental understanding.",
     }
   ];
-
   return (
     <div name="Projects" className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10">
       <div>
