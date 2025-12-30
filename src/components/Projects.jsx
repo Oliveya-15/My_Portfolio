@@ -6,7 +6,7 @@ function Projects() {
       id: 1,
       logo: "/docify.png", // Path relative to public folder
       name: "Docify Doctor Appointment Booking App - Frontend",
-      Link: "https://docify-react-tail.onrender.com", 
+      Link: "https://docify-frontend-yw8c.onrender.com/", 
       sourceCodeLink: "https://github.com/Oliveya-15/Docify_React_Tail.git", // Example source code link
       description: "Responsive frontend for doctor appointments using React and Tailwind, with real-time slot booking and login/logout UI.",
     },
