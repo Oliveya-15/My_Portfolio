@@ -29,7 +29,7 @@ function About() {
         </h1>
         <span>
           - 10th & 12th | Alipurduar New Town Girls' High School | 94.2% <br />
-          - BCA (Currently pursuing) | Siliguri Institute of Technology | CGPA: 9.23
+          - MCA (Currently pursuing) | Techno Main Salt Lake | CGPA: 8.68 (Current)
         </span>
         <br />
         <br />
