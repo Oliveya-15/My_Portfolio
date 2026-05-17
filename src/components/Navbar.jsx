@@ -3,35 +3,23 @@ import pic from "/profile.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
+
 function Navbar() {
   const [menu, setMenu] = useState(false);
   const navItems = [
-    {
-      id: 1,
-      text: "Home",
-    },
-    {
-      id: 2,
-      text: "About",
-    },
-    {
-      id: 3,
-      text: "Projects",
-    },
-    {
-      id: 4,
-      text: "Skills",
-    },
-    {
-      id: 5,
-      text: "Contact",
-    },
+    { id: 1, text: "Home" },
+    { id: 2, text: "About" },
+    { id: 3, text: "Projects" },
+    { id: 4, text: "Skills" },
+    { id: 5, text: "Contact" },
+    { id: 6, text: "Let's Talk" },   // fixed duplicate key
   ];
+
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-white">
         <div className="flex justify-between items-center h-16">
-          <div className=" flex space-x-2">
+          <div className="flex space-x-2">
             <img src={pic} className="h-12 w-12 rounded-full" alt="" />
             <h1 className="font-semibold text-xl cursor-pointer">
               <span className="text-blue-600 text-2xl">O</span>liveya
@@ -47,7 +35,7 @@ function Navbar() {
                   key={id}
                 >
                   <Link
-                    to={text}
+                    to={text === "Let's Talk" ? "LetsTalk" : text}
                     smooth={true}
                     duration={500}
                     offset={-70}
@@ -74,7 +62,7 @@ function Navbar() {
                 >
                   <Link
                     onClick={() => setMenu(!menu)}
-                    to={text}
+                    to={text === "Let's Talk" ? "LetsTalk" : text}
                     smooth={true}
                     duration={500}
                     offset={-70}

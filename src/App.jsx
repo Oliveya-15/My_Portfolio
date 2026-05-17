@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import LetsTalk from "./components/LetsTalk";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Projects />
         <Skills />
         <Contact />
+        <LetsTalk />
         <Footer />
       </div>
       <Toaster />
