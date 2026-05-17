@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import pic from "/profile.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
@@ -12,8 +12,33 @@ function Navbar() {
     { id: 3, text: "Projects" },
     { id: 4, text: "Skills" },
     { id: 5, text: "Contact" },
-    { id: 6, text: "Let's Talk" },   // fixed duplicate key
+    { id: 6, text: "Let's Talk" },
   ];
+
+  // Stronger fix: Force scroll to top on initial load
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant"
+      });
+    };
+
+    // Run immediately
+    scrollToTop();
+
+    // Run again after a small delay (in case react-scroll interferes)
+    const timer1 = setTimeout(scrollToTop, 50);
+    
+    // Final safety net
+    const timer2 = setTimeout(scrollToTop, 300);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }, []);
 
   return (
     <>
