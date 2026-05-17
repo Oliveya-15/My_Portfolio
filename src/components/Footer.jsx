@@ -48,7 +48,7 @@ function Footer() {
             </ul>
             <div className="mt-8 border-t border-gray-700 pt-8 flex flex-col items-center">
               <p className="text-sm">
-                &copy; 2024 Oliveya. All rights reserved.
+                &copy; 2026 Oliveya. All rights reserved.
               </p>
               <p className="text-sm">Thank you! for visiting my portfolio❤️Excited to work and grow with your team.</p>
             </div>
