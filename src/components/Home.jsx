@@ -71,7 +71,7 @@ function Home() {
 
                   {/* Python */}
                   <div className="w-8 h-8 flex items-center justify-center">
-                    <div className="w-8 h-8 bg-yellow-400 rounded-2xl flex items-center justify-center hover:scale-110 duration-200 border border-gray-300">
+                    <div className="w-8 h-8 bg-blue-400 rounded-2xl flex items-center justify-center hover:scale-110 duration-200 border border-gray-300">
                       <FaPython className="text-2xl text-black" />
                     </div>
                   </div>
