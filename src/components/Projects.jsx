@@ -43,7 +43,15 @@ function Projects() {
 
   const basicCardItem = [
     {
-      id: 5,
+      "id": 5,
+      "logo": "/Ask_Me.png",
+      "name": "Ask Me",
+      "Link": "https://ask-me-sage-kappa.vercel.app/",
+      "sourceCodeLink": "https://github.com/Oliveya-15/Ask_ME",
+      "description": "An AI-powered content creation platform offering tools for article writing, blog titles, image generation, image editing, and resume reviews."
+    },
+    {
+      id: 6,
       logo: "/bookwook.png",
       name: "BookWook - Book Reading Platform",
       Link: "https://bookwookweb-frontend.onrender.com/",
@@ -52,7 +60,7 @@ function Projects() {
         "MERN-based platform for book lovers to read free and paid books online, with login authentication and dark/light mode.",
     },
     {
-      id: 6,
+      id: 7,
       logo: "/snake.png",
       name: "Snake Game",
       Link: "https://oliveya-15.github.io/SnakeGame_Python/",
@@ -62,7 +70,7 @@ function Projects() {
         "Visually appealing Snake game built with Python, Pygame, and Pillow, featuring sound effects, image backgrounds, and adjustable levels.",
     },
     {
-      id: 7,
+      id: 8,
       logo: "/htmlproject.png",
       name: "Ecocean - Sustainable e-commerce website",
       Link: "https://sustainable-ecommerce-html-css-js.netlify.app/",
@@ -72,7 +80,7 @@ function Projects() {
         "Eco-friendly e-commerce website developed using HTML, CSS, and JavaScript with interactive product cards and Google Maps.",
     },
     {
-      id: 8,
+      id: 9,
       logo: "/gtnthumb.png",
       name: "Game - Guess The Number",
       Link: "https://oliveya-15.github.io/GUESS-THE-NUMBER/",
@@ -82,7 +90,7 @@ function Projects() {
         "Number guessing game built in Python with Tkinter, including voice assistance, hints, timer, levels, and dynamic GUI.",
     },
     {
-      id: 9,
+      id: 10,
       logo: "/amazon.png",
       name: "Amazon Clone - Landing Page",
       Link: "https://amazon-clonesite-html-css.netlify.app/",
