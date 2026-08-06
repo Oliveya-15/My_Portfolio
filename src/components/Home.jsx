@@ -95,7 +95,7 @@ function Home() {
                 
                 {/* Resume Button */}
                 <a
-                  href="https://drive.google.com/file/d/1xDzg0JCkV1_3CRn-AJWsIn6zKHNWCoSZ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1otUzbI5OS9akZGlFKk6G5LqsuAakyJD7/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between bg-gray-300 text-black text-base border-2 border-black py-3 px-5 rounded-xl hover:bg-gray-700 hover:text-white hover:border-gray-200 transition-all w-full sm:w-auto"
