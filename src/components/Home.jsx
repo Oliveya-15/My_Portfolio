@@ -44,7 +44,7 @@ function Home() {
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/in/oliveya-choudhury-868349270/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/oliveya-choudhury/" target="_blank" rel="noopener noreferrer">
                       <FaLinkedin className="text-3xl cursor-pointer hover:text-gray-600" />
                     </a>
                   </li>
@@ -95,7 +95,7 @@ function Home() {
                 
                 {/* Resume Button */}
                 <a
-                  href="https://drive.google.com/file/d/1-ZawNw_7kgnUZgEirPWGddKFsLfK4UDj/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1oU2GyYVBAbJ8AZfcITTWI2DXw4WD0s29/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between bg-gray-300 text-black text-base border-2 border-black py-3 px-5 rounded-xl hover:bg-gray-700 hover:text-white hover:border-gray-200 transition-all w-full sm:w-auto"
