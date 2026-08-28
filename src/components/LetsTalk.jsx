@@ -160,7 +160,7 @@ To secure a challenging internship where I can apply my full-stack development, 
     try {
       const response = await groq.chat.completions.create({
         messages: [systemPrompt, ...messages, userMessage],
-        model: 'llama-3.1-8b-instant',
+        model: 'openai/gpt-oss-120b',
         temperature: 0.75,
         max_tokens: 1024,
       });
