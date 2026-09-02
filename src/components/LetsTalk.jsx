@@ -49,6 +49,8 @@ function LetsTalk() {
 - Clickable inline links: [Live Demo](https://example.com) (they will appear blue).
 - Code blocks with language tags if showing code snippets.
 - Horizontal rules (---) to separate sections if needed.
+- NEVER use HTML tags such as <br>, <br/>, <p>, <div>, or any other HTML tags.
+
 
 Never send raw unformatted text. Always apply Markdown to make responses visually appealing and easy to scan.
 
