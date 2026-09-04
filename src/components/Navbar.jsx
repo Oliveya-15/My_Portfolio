@@ -57,10 +57,15 @@ function Navbar() {
         : "bg-white/70 backdrop-blur-sm"
         }`}
     >
-
       <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-20 flex justify-between items-center">
         {/* Brand Logo & Name with Gradient Elements */}
-        <div className="flex items-center space-x-3 cursor-pointer group">
+        <Link
+          to="Home"
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="flex items-center space-x-3 cursor-pointer group"
+        >
           <div className="relative">
             <img
               src={logo}
@@ -74,7 +79,7 @@ function Navbar() {
               Choudhur<span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent font-bold">y</span>
             </p>
           </h1>
-        </div>
+        </Link>
 
 
         {/* Desktop Navbar Links */}
