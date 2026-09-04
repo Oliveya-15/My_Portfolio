@@ -150,7 +150,7 @@ function Home() {
           <div className="lg:w-5/12 flex justify-center order-1 lg:order-2">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 via-blue-500 to-violet-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
-              <div className="relative p-2 rounded-full bg-gradient-to-tr from-indigo-600 via-blue-400 to-violet-600 shadow-2xl">
+              <div className="relative p-1.5 rounded-full bg-gradient-to-tr from-indigo-600 via-blue-400 to-violet-600 shadow-2xl">
                 <img
                   src="/profile.png"
                   className="rounded-full w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] lg:w-[400px] lg:h-[400px] object-cover bg-white"

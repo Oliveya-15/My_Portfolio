@@ -93,34 +93,34 @@ function About() {
   return (
     <div
       name="About"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 py-28 relative overflow-hidden"
+      className="max-w-screen-2xl container mx-auto px-4 md:px-20 pt-20 pb-12 relative overflow-hidden transition-all duration-300"
     >
       {/* Custom CSS Keyframes for modern interactive sliding & pop-up animations */}
       <style>{`
         @keyframes fadeSlideUp {
-          0% { opacity: 0; transform: translateY(30px); }
+          0% { opacity: 0; transform: translateY(20px); }
           100% { opacity: 1; transform: translateY(0); }
         }
-        .animate-pop-1 { animation: fadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
-        .animate-pop-2 { animation: fadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards; opacity: 0; }
-        .animate-pop-3 { animation: fadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards; opacity: 0; }
+        .animate-pop-1 { animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-pop-2 { animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
+        .animate-pop-3 { animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards; opacity: 0; }
       `}</style>
 
       {/* Dynamic Background Glowing Orbs */}
       <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-tr from-indigo-200/40 to-blue-200/20 rounded-full blur-3xl pointer-events-none z-[-1]"></div>
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-br from-violet-200/30 to-indigo-200/30 rounded-full blur-3xl pointer-events-none z-[-1]"></div>
 
-      <div className="space-y-16">
+      <div className="space-y-10">
 
         {/* Section Header */}
-        <div className="text-center space-y-4 animate-pop-1">
+        <div className="text-center space-y-3 animate-pop-1">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/90 border border-indigo-200/80 shadow-sm text-indigo-700 text-xs font-bold tracking-widest uppercase">
             <span>Professional Background</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
             About <span className="bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 bg-clip-text text-transparent">Me</span>
           </h2>
-          <p className="max-w-3xl mx-auto text-base md:text-lg text-gray-600 leading-relaxed font-normal">
+          <p className="max-w-3xl mx-auto text-sm md:text-base text-gray-600 leading-relaxed font-normal">
             A software engineering student driven by a passion for building scalable full-stack web architectures and data-driven machine learning solutions.
           </p>
         </div>
@@ -140,12 +140,13 @@ function About() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center space-x-2 px-4 sm:px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${isActive
+                  className={`flex items-center space-x-2 px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
+                    isActive
                       ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/30 scale-105"
                       : "text-gray-600 hover:text-indigo-600 hover:bg-indigo-50/50"
-                    }`}
+                  }`}
                 >
-                  <Icon className="text-base" />
+                  <Icon className="text-sm sm:text-base" />
                   <span className="hidden sm:inline">{tab.label}</span>
                 </button>
               );
@@ -153,11 +154,11 @@ function About() {
           </div>
         </div>
 
-        {/* Tab Content Display Panels with Dynamic Transitions */}
-        <div className="animate-pop-3 min-h-[400px]">
+        {/* Tab Content Display Panels with Dynamic Fluid Auto-Height */}
+        <div className="animate-pop-3 transition-all duration-300">
 
           {activeTab === "education" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {educationData.map((edu, idx) => {
                 const isSchool = edu.degree.includes("10") || edu.degree.includes("12") || edu.degree.toLowerCase().includes("secondary");
                 const isBCA = edu.degree.toLowerCase().includes("bca");
@@ -166,26 +167,26 @@ function About() {
                 return (
                   <div
                     key={idx}
-                    className="group relative bg-white/90 backdrop-blur-xl border border-indigo-100/80 p-8 rounded-3xl shadow-xl shadow-indigo-500/5 hover:shadow-2xl hover:shadow-indigo-500/15 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                    className="group relative bg-white/90 backdrop-blur-xl border border-indigo-100/80 p-6 rounded-2xl shadow-lg shadow-indigo-500/5 hover:shadow-xl hover:shadow-indigo-500/15 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden"
                   >
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-indigo-500/10 to-transparent rounded-bl-full pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
-                    <div className="space-y-4">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-indigo-500/10 to-transparent rounded-bl-full pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
+                    <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-200/60 text-indigo-700 text-xs font-bold">
+                        <span className="px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200/60 text-indigo-700 text-xs font-bold">
                           {edu.period}
                         </span>
-                        <span className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white text-xs font-bold shadow-sm">
+                        <span className="px-3 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white text-xs font-bold shadow-sm">
                           {edu.score}
                         </span>
                       </div>
-                      <h3 className="text-xl font-extrabold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                      <h3 className="text-lg font-extrabold text-gray-900 group-hover:text-indigo-600 transition-colors">
                         {edu.degree}
                       </h3>
-                      <p className="text-sm font-semibold text-indigo-900/80">
+                      <p className="text-xs font-semibold text-indigo-900/80">
                         {edu.institution}
                       </p>
                       {!isSchool && (
-                        <p className="text-sm text-gray-600 leading-relaxed pt-2 border-t border-gray-100">
+                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed pt-2 border-t border-gray-100">
                           {isBCA
                             ? "Achieved a rigorous academic standing, laying a strong foundation of excellence and intellectual dedication."
                             : isMCA
@@ -199,27 +200,28 @@ function About() {
               })}
             </div>
           )}
+
           {/* 2. Skills & Expertise Panel */}
           {activeTab === "skills" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               {skillCategories.map((cat, idx) => (
                 <div
                   key={idx}
-                  className="group bg-white/90 backdrop-blur-xl border border-indigo-100/80 p-6 rounded-3xl shadow-xl shadow-indigo-500/5 hover:shadow-2xl hover:shadow-indigo-500/15 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+                  className="group bg-white/90 backdrop-blur-xl border border-indigo-100/80 p-5 rounded-2xl shadow-lg shadow-indigo-500/5 hover:shadow-xl hover:shadow-indigo-500/15 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
                 >
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-600 to-violet-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/30 group-hover:rotate-6 transition-transform duration-300">
-                      <FaLaptopCode className="text-xl" />
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/30 group-hover:rotate-6 transition-transform duration-300">
+                      <FaLaptopCode className="text-base" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900">{cat.title}</h3>
-                      <p className="text-xs text-gray-500 font-medium mt-0.5">{cat.desc}</p>
+                      <h3 className="text-base font-bold text-gray-900">{cat.title}</h3>
+                      <p className="text-[11px] text-gray-500 font-medium mt-0.5">{cat.desc}</p>
                     </div>
-                    <div className="flex flex-wrap gap-2 pt-2">
+                    <div className="flex flex-wrap gap-1.5 pt-1">
                       {cat.items.map((item, iIdx) => (
                         <span
                           key={iIdx}
-                          className="px-3 py-1.5 bg-indigo-50/70 border border-indigo-100 text-indigo-900 text-xs font-semibold rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-200"
+                          className="px-2.5 py-1 bg-indigo-50/70 border border-indigo-100 text-indigo-900 text-xs font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition-all duration-200"
                         >
                           {item}
                         </span>
@@ -233,20 +235,20 @@ function About() {
 
           {/* 3. Achievements Panel */}
           {activeTab === "achievements" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {achievementsList.map((ach, idx) => (
                 <div
                   key={idx}
-                  className="group bg-white/90 backdrop-blur-xl border border-indigo-100/80 p-6 sm:p-8 rounded-3xl shadow-xl shadow-indigo-500/5 hover:shadow-2xl hover:shadow-indigo-500/15 hover:-translate-y-1.5 transition-all duration-300 flex items-start space-x-5"
+                  className="group bg-white/90 backdrop-blur-xl border border-indigo-100/80 p-5 sm:p-6 rounded-2xl shadow-lg shadow-indigo-500/5 hover:shadow-xl hover:shadow-indigo-500/15 hover:-translate-y-1 transition-all duration-300 flex items-start space-x-4"
                 >
-                  <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-600 shadow-sm group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <FaAward className="text-2xl" />
+                  <div className="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-600 shadow-sm group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                    <FaAward className="text-xl" />
                   </div>
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                  <div className="space-y-1.5">
+                    <h3 className="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
                       {ach.title}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed font-normal">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                       {ach.detail}
                     </p>
                   </div>
@@ -257,19 +259,19 @@ function About() {
 
           {/* 4. Hobbies & Interests Panel */}
           {activeTab === "hobbies" && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {hobbies.map((hob, idx) => (
                 <div
                   key={idx}
-                  className="group bg-white/90 backdrop-blur-xl border border-indigo-100/80 p-6 rounded-3xl shadow-xl shadow-indigo-500/5 hover:shadow-2xl hover:shadow-indigo-500/15 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+                  className="group bg-white/90 backdrop-blur-xl border border-indigo-100/80 p-5 rounded-2xl shadow-lg shadow-indigo-500/5 hover:shadow-xl hover:shadow-indigo-500/15 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
                 >
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-500 flex items-center justify-center text-white shadow-md shadow-rose-500/30 group-hover:scale-110 transition-transform duration-300">
-                      <FaHeart className="text-xl" />
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-500 to-pink-500 flex items-center justify-center text-white shadow-md shadow-rose-500/30 group-hover:scale-110 transition-transform duration-300">
+                      <FaHeart className="text-base" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900">{hob.name}</h3>
-                      <p className="text-xs text-gray-600 leading-relaxed mt-2 font-normal">
+                      <h3 className="text-base font-bold text-gray-900">{hob.name}</h3>
+                      <p className="text-xs text-gray-600 leading-relaxed mt-1.5 font-normal">
                         {hob.desc}
                       </p>
                     </div>

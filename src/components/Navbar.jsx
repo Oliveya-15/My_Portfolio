@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import pic from "/profile.png";
+import logo from "/logo.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
@@ -63,7 +63,7 @@ function Navbar() {
         <div className="flex items-center space-x-3 cursor-pointer group">
           <div className="relative">
             <img
-              src={pic}
+              src={logo}
               className="relative h-12 w-12 rounded-full object-cover shadow-sm ring-2 ring-indigo-600/20 group-hover:ring-indigo-600/50 transition-all duration-300"
               alt="Oliveya Choudhury"
             />
