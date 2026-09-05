@@ -89,48 +89,40 @@ Tools & Others: Git, GitHub, VS Code, Google Colab, Anaconda, Canva
 Core Subjects: DSA, DBMS, OOP, Operating Systems, Computer Networks, Cloud Computing
 
 --- Key Projects (with links) ---
-1. **Docify – Doctor Appointment Booking (MERN)**  
-   Full-stack platform with role-based authentication.  
+1. **Docify – Doctor Appointment Booking (MERN)** Full-stack platform with role-based authentication.  
    Tech: MongoDB, Express.js, React, Node.js, Tailwind CSS  
    Live: https://docify-frontend-yw8c.onrender.com/  
    Code: https://github.com/Oliveya-15/Docify_MERN_Deployed.git
 
-2. **Health Diagnosis ML Model**  
-   Predicts Parkinson’s, Heart Disease, Diabetes with ~85% accuracy.  
+2. **Health Diagnosis ML Model** Predicts Parkinson’s, Heart Disease, Diabetes with ~85% accuracy.  
    Tech: Python, Scikit-learn, Streamlit  
    Live: https://healthdiagnosismodel.streamlit.app/  
    Code: https://github.com/Oliveya-15/HealthDiagnosisModel.git
 
-3. **Talkify – Chat with PDFs**  
-   AI-powered app to upload PDFs and chat with content.  
+3. **Talkify – Chat with PDFs** AI-powered app to upload PDFs and chat with content.  
    Tech: Streamlit + AI  
    Live: https://talkify.streamlit.app/  
    Code: https://github.com/Oliveya-15/Talkify-Deployed
 
-4. **BookWook – Digital Reading Platform**  
-   MERN platform for book lovers to read free/paid books, login auth, dark/light mode.  
+4. **BookWook – Digital Reading Platform** MERN platform for book lovers to read free/paid books, login auth, dark/light mode.  
    Live: https://bookwookweb-frontend.onrender.com/  
    Code: https://github.com/Oliveya-15/BookWookWeb
 
-5. **Ecocean – Sustainable E-Commerce**  
-   Responsive frontend for eco-friendly products.  
+5. **Ecocean – Sustainable E-Commerce** Responsive frontend for eco-friendly products.  
    Tech: HTML5, CSS3, JavaScript  
    Live: https://sustainable-ecommerce-html-css-js.netlify.app/  
    Code: https://github.com/Oliveya-15/EcommerceApp.git
 
-6. **Classic Snake Game (Python)**  
-   Retro Snake game with sound, levels, Pygame.  
+6. **Classic Snake Game (Python)** Retro Snake game with sound, levels, Pygame.  
    Live: https://oliveya-15.github.io/SnakeGame_Python/  
    Code: https://github.com/Oliveya-15/SnakeGame_Python.git
 
-7. **Weather Forecast Web App**  
-   Fetches current weather using OpenWeatherMap API.  
+7. **Weather Forecast Web App** Fetches current weather using OpenWeatherMap API.  
    Tech: HTML, CSS, JavaScript (Vanilla)  
    Live: https://weatherapp-yw8c.onrender.com/  
    Code: https://github.com/Oliveya-15/WeatherApp.git
 
-8. **Personal Finance Assistant (PFA)**  
-   Python script with NLP (NLTK) for financial advice.  
+8. **Personal Finance Assistant (PFA)** Python script with NLP (NLTK) for financial advice.  
    Live: https://financeassistant.streamlit.app/  
    Code: https://github.com/Oliveya-15/PersonalFinanceAssistant.git
 
@@ -139,10 +131,9 @@ Core Subjects: DSA, DBMS, OOP, Operating Systems, Computer Networks, Cloud Compu
    Live: https://amazon-clonesite-html-css.netlify.app/  
    Code: https://github.com/Oliveya-15/AmazonColne_HTMLCSS.git
 
-10. **Guess The Number Game**  
-     Python + Tkinter game with voice assistance, hints, timer, levels.  
-     Live: https://oliveya-15.github.io/GUESS-THE-NUMBER/  
-     Code: https://github.com/Oliveya-15/GUESS-THE-NUMBER.git
+10. **Guess The Number Game** Python + Tkinter game with voice assistance, hints, timer, levels.  
+    Live: https://oliveya-15.github.io/GUESS-THE-NUMBER/  
+    Code: https://github.com/Oliveya-15/GUESS-THE-NUMBER.git
 
 --- Achievements ---
 - Consistent Academic Excellence – BCA CGPA 8.94 | MCA YGPA 8.66
@@ -312,10 +303,10 @@ To secure a challenging internship where I can apply my full-stack development, 
               <button
                 type="submit"
                 disabled={isLoading || !input.trim()}
-                className="bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 text-white w-11 h-11 sm:w-auto sm:h-auto sm:px-6 sm:py-3 rounded-full sm:rounded-2xl hover:opacity-95 transition-all shadow-md shadow-indigo-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 font-semibold text-sm shrink-0 cursor-pointer"
+                className="bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 text-white w-12 h-12 rounded-full hover:opacity-95 transition-all shadow-md shadow-indigo-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shrink-0 cursor-pointer"
+                title="Send"
               >
-                <span className="hidden sm:inline">Send</span>
-                <FaPaperPlane className="text-xs sm:ml-0" />
+                <FaPaperPlane className="text-xs" />
               </button>
             </div>
           </form>
