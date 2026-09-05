@@ -73,10 +73,17 @@ function Navbar() {
               alt="Oliveya Choudhury"
             />
           </div>
-          <h1 className="font-bold text-xl tracking-tight text-gray-900">
-            <span className="bg-gradient-to-r from-indigo-500 via-blue-500 to-violet-700 bg-clip-text text-transparent text-2xl font-extrabold">O</span>liveya
-            <p className="text-xs font-extrabold text-gray-800 tracking-wider">
-              Choudhur<span className="bg-gradient-to-r from-indigo-500 via-blue-500 to-violet-700 bg-clip-text text-transparent font-bold">y</span>
+
+          <h1 className="logo-name font-bold text-xl tracking-tight text-gray-900">
+            <span className="logo-special bg-gradient-to-r from-indigo-500 via-blue-500 to-violet-700 bg-clip-text text-transparent">
+              O
+            </span>
+            liveya
+            <p className="logo-lastname text-xs font-extrabold text-gray-800 tracking-wider">
+              Choudhur
+              <span className="logo-special bg-gradient-to-r from-indigo-500 via-blue-500 to-violet-700 bg-clip-text text-transparent">
+                y
+              </span>
             </p>
           </h1>
         </Link>

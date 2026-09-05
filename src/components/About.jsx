@@ -66,23 +66,23 @@ function About() {
 
   const achievementsList = [
     {
-      title: "Academic Excellence",
-      detail: "Achieved consistent first-class academic performance, highlighted by an 8.94 CGPA in BCA and an 8.66 YGPA in MCA.",
+      title: "Academic & Extracurricular Excellence",
+      detail: "Maintained a strong academic record with an 8.94 CGPA in BCA and an 8.66 YGPA in MCA, complemented by active engagement in diverse student development activities.",
       image: "/achi1.png",
     },
     {
-      title: "Event Leadership",
-      detail: "Spearheaded and managed multidisciplinary technical and cultural student initiatives from conceptualization to execution.",
+      title: "Inter-College Leadership & Participation",
+      detail: "Actively participated in, led, and managed multiple inter-college technical and cultural programs, successfully driving team coordination and event execution.",
       image: "/achi2.png",
     },
     {
-      title: "Competitive Recognition",
-      detail: "Awarded recognition for technical aptitude and creative problem-solving in institutional competitions.",
+      title: "Multidisciplinary Awards",
+      detail: "Received recognition and awards across diverse domains, spanning best project accolades, creative arts and crafts, and broader extracurricular initiatives.",
       image: "/achi3.png",
     },
     {
       title: "Technical Credentials",
-      detail: "Earned a 5-Star Python badge on HackerRank alongside specialized networking and programming certifications.",
+      detail: "Earned professional industry credentials, highlighted by a 5-Star Python rating on HackerRank alongside specialized programming and technical certifications.",
       image: "/achi4.png",
     },
   ];
@@ -144,11 +144,10 @@ function About() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center space-x-2 px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
-                    isActive
+                  className={`flex items-center space-x-2 px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${isActive
                       ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/30 scale-105"
                       : "text-gray-600 hover:text-indigo-600 hover:bg-indigo-50/50"
-                  }`}
+                    }`}
                 >
                   <Icon className="text-sm sm:text-base" />
                   <span className="hidden sm:inline">{tab.label}</span>

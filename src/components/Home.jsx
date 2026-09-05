@@ -41,7 +41,7 @@ function Home() {
 
             {/* Cleaned Professional Bio Based on Resume */}
             <p className="text-base sm:text-lg text-gray-600 text-justify leading-relaxed font-normal">
-              Results-driven MCA student (1st Year YGPA: 8.66 | BCA CGPA: 8.94) with hands-on experience in full-stack web development (MERN Stack) and machine learning. Proficient in Python, JavaScript, React, and Node.js, I am passionate about building scalable, user-centric applications and data-driven solutions. Actively seeking internship opportunities to innovate, collaborate, and contribute meaningfully to the IT industry.
+              As an MCA student with a consistent academic background, I treat every line of code as an opportunity to build something impactful. I combine my foundation in computer science fundamentals with hands-on experience in MERN stack development and machine learning. From architecting real-time web platforms to exploring AI workflows, I am driven by curiosity and a commitment to quality. I am always eager to take on new technical challenges, collaborate with innovative teams, and contribute meaningfully to the world of software development.
             </p>
 
             {/* Enhanced Availability & Currently Working Stack Grid */}
