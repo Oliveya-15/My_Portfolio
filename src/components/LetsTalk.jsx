@@ -140,9 +140,9 @@ Core Subjects: DSA, DBMS, OOP, Operating Systems, Computer Networks, Cloud Compu
    Code: https://github.com/Oliveya-15/AmazonColne_HTMLCSS.git
 
 10. **Guess The Number Game**  
-    Python + Tkinter game with voice assistance, hints, timer, levels.  
-    Live: https://oliveya-15.github.io/GUESS-THE-NUMBER/  
-    Code: https://github.com/Oliveya-15/GUESS-THE-NUMBER.git
+     Python + Tkinter game with voice assistance, hints, timer, levels.  
+     Live: https://oliveya-15.github.io/GUESS-THE-NUMBER/  
+     Code: https://github.com/Oliveya-15/GUESS-THE-NUMBER.git
 
 --- Achievements ---
 - Consistent Academic Excellence – BCA CGPA 8.94 | MCA YGPA 8.66
@@ -312,10 +312,10 @@ To secure a challenging internship where I can apply my full-stack development, 
               <button
                 type="submit"
                 disabled={isLoading || !input.trim()}
-                className="bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 text-white px-6 py-3 rounded-2xl hover:opacity-95 transition-all shadow-md shadow-indigo-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                className="bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 text-white w-11 h-11 sm:w-auto sm:h-auto sm:px-6 sm:py-3 rounded-full sm:rounded-2xl hover:opacity-95 transition-all shadow-md shadow-indigo-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 font-semibold text-sm shrink-0 cursor-pointer"
               >
-                <span>Send</span>
-                <FaPaperPlane className="text-xs" />
+                <span className="hidden sm:inline">Send</span>
+                <FaPaperPlane className="text-xs sm:ml-0" />
               </button>
             </div>
           </form>

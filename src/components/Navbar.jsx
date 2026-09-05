@@ -74,9 +74,9 @@ function Navbar() {
             />
           </div>
           <h1 className="font-bold text-xl tracking-tight text-gray-900">
-            <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent text-2xl font-extrabold">O</span>liveya
+            <span className="bg-gradient-to-r from-indigo-500 via-blue-500 to-violet-700 bg-clip-text text-transparent text-2xl font-extrabold">O</span>liveya
             <p className="text-xs font-extrabold text-gray-800 tracking-wider">
-              Choudhur<span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent font-bold">y</span>
+              Choudhur<span className="bg-gradient-to-r from-indigo-500 via-blue-500 to-violet-700 bg-clip-text text-transparent font-bold">y</span>
             </p>
           </h1>
         </Link>
