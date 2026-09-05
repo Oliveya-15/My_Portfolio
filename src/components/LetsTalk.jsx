@@ -290,20 +290,20 @@ To secure a challenging internship where I can apply my full-stack development, 
           </div>
 
           {/* Input Footer Form */}
-          <form onSubmit={sendMessage} className="border-t border-indigo-100/80 p-4 bg-white/80 backdrop-blur-md">
-            <div className="flex gap-2.5 items-center">
+          <form onSubmit={sendMessage} className="border-t border-indigo-100/80 p-3 md:p-4 bg-white/80 backdrop-blur-md">
+            <div className="flex gap-2 items-center">
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask me anything about my projects, skills, education..."
-                className="flex-1 px-5 py-3 bg-indigo-50/40 border border-indigo-200/80 rounded-2xl focus:outline-none focus:border-indigo-600 focus:bg-white text-sm text-gray-800 transition-all shadow-inner"
+                className="flex-1 min-w-0 px-4 md:px-5 py-2.5 md:py-3 bg-indigo-50/40 border border-indigo-200/80 rounded-xl md:rounded-2xl focus:outline-none focus:border-indigo-600 focus:bg-white text-xs md:text-sm text-gray-800 transition-all shadow-inner"
                 disabled={isLoading}
               />
               <button
                 type="submit"
                 disabled={isLoading || !input.trim()}
-                className="bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 text-white w-12 h-12 rounded-full hover:opacity-95 transition-all shadow-md shadow-indigo-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shrink-0 cursor-pointer"
+                className="bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 text-white w-10 h-10 md:w-12 md:h-12 rounded-full hover:opacity-95 transition-all shadow-md shadow-indigo-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shrink-0 cursor-pointer"
                 title="Send"
               >
                 <FaPaperPlane className="text-xs" />

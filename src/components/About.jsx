@@ -68,18 +68,22 @@ function About() {
     {
       title: "Academic Excellence",
       detail: "Achieved consistent first-class academic performance, highlighted by an 8.94 CGPA in BCA and an 8.66 YGPA in MCA.",
+      image: "/achi1.png",
     },
     {
       title: "Event Leadership",
       detail: "Spearheaded and managed multidisciplinary technical and cultural student initiatives from conceptualization to execution.",
+      image: "/achi2.png",
     },
     {
       title: "Competitive Recognition",
       detail: "Awarded recognition for technical aptitude and creative problem-solving in institutional competitions.",
+      image: "/achi3.png",
     },
     {
       title: "Technical Credentials",
       detail: "Earned a 5-Star Python badge on HackerRank alongside specialized networking and programming certifications.",
+      image: "/achi4.png",
     },
   ];
 
@@ -127,7 +131,7 @@ function About() {
 
         {/* Interactive Tab Navigation */}
         <div className="flex justify-center animate-pop-2">
-          <div className="inline-flex p-1.5 bg-white/80 backdrop-blur-md border border-indigo-100 rounded-2xl shadow-lg shadow-indigo-500/5">
+          <div className="inline-flex p-1.5 bg-white/85 backdrop-blur-md border border-indigo-100 rounded-2xl shadow-lg shadow-indigo-500/5">
             {[
               { id: "education", label: "Education", icon: FaGraduationCap },
               { id: "skills", label: "Expertise", icon: FaLaptopCode },
@@ -233,22 +237,31 @@ function About() {
             </div>
           )}
 
-          {/* 3. Achievements Panel */}
+          {/* 3. Achievements Panel with Certificate/Prize Mini Cards */}
           {activeTab === "achievements" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {achievementsList.map((ach, idx) => (
                 <div
                   key={idx}
-                  className="group bg-white/90 backdrop-blur-xl border border-indigo-100/80 p-5 sm:p-6 rounded-2xl shadow-lg shadow-indigo-500/5 hover:shadow-xl hover:shadow-indigo-500/15 hover:-translate-y-1 transition-all duration-300 flex items-start space-x-4"
+                  className="group bg-white/90 backdrop-blur-xl border border-indigo-100/80 rounded-2xl shadow-lg shadow-indigo-500/5 hover:shadow-xl hover:shadow-indigo-500/15 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden"
                 >
-                  <div className="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-600 shadow-sm group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <FaAward className="text-xl" />
+                  <div className="h-44 overflow-hidden relative bg-indigo-50">
+                    <img
+                      src={ach.image}
+                      alt={ach.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-2 left-3 right-3 flex items-center space-x-1.5 text-white">
+                      <FaAward className="text-amber-400 text-sm flex-shrink-0" />
+                      <span className="text-xs font-bold truncate">{ach.title}</span>
+                    </div>
                   </div>
-                  <div className="space-y-1.5">
-                    <h3 className="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                  <div className="p-4 flex flex-col justify-between flex-grow space-y-2">
+                    <h3 className="text-sm font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
                       {ach.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
+                    <p className="text-xs text-gray-600 leading-relaxed font-normal">
                       {ach.detail}
                     </p>
                   </div>
