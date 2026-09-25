@@ -25,11 +25,11 @@ function Projects() {
     {
       id: 3,
       logo: "/talkify.png",
-      name: "Talkify - Chat with your PDFs",
+      name: "Talkify - Chat with your Documents",
       Link: "https://talkify.streamlit.app/",
       sourceCodeLink: "https://github.com/Oliveya-15/Talkify-Deployed",
       description:
-        "An AI-powered app that lets users upload PDFs and interactively chat with their content using natural language queries.",
+        "An AI-powered app that lets users upload Documents and interactively chat with their content using natural language queries.",
     },
     {
       id: 4,
