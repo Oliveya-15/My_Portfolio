@@ -14,6 +14,15 @@ function Projects() {
     },
     {
       id: 2,
+      logo: "/talkify.png",
+      name: "Talkify - Chat with your Documents",
+      Link: "https://talkify-v2-0.vercel.app/",
+      sourceCodeLink: "https://github.com/Oliveya-15/Talkify-V2.0",
+      description:
+        "An AI-powered document intelligence app that lets users upload files and interactively chat with their content via hybrid RAG search and verifiable citations.",
+    },
+    {
+      id: 3,
       logo: "/ml.png",
       name: "Health Diagnosis ML Model",
       Link: "https://healthdiagnosismodel-k6wpmkpe5tbofpydzkdjxa.streamlit.app/",
@@ -21,15 +30,6 @@ function Projects() {
         "https://github.com/Oliveya-15/HealthDiagnosisModel.git",
       description:
         "Health diagnosis model using Google Colab, Streamlit, and Spyder, predicting Parkinson's, heart disease, and diabetes with 85% accuracy.",
-    },
-    {
-      id: 3,
-      logo: "/talkify.png",
-      name: "Talkify - Chat with your Documents",
-      Link: "https://talkify.streamlit.app/",
-      sourceCodeLink: "https://github.com/Oliveya-15/Talkify-Deployed",
-      description:
-        "An AI-powered app that lets users upload Documents and interactively chat with their content using natural language queries.",
     },
     {
       id: 4,
