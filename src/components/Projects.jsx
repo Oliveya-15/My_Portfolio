@@ -8,6 +8,7 @@ function Projects() {
       logo: "/docify.png",
       name: "Docify Doctor Appointment Booking App - MERN",
       Link: "https://docify-frontend-yw8c.onrender.com/",
+      adminLink: "https://docify-admin.onrender.com", // ADDED ADMIN LINK
       sourceCodeLink: "https://github.com/Oliveya-15/Docify_MERN_Deployed.git",
       description:
         "Responsive frontend for doctor appointments using React and Tailwind, with real-time slot booking and login/logout UI.",
@@ -31,6 +32,8 @@ function Projects() {
       description:
         "Health diagnosis model using Google Colab, Streamlit, and Spyder, predicting Parkinson's, heart disease, and diabetes with 85% accuracy.",
     },
+    // --- NEW PROJECTS ADDED HERE ---
+
     {
       id: 4,
       logo: "",
@@ -45,6 +48,23 @@ function Projects() {
   const basicCardItem = [
     {
       id: 5,
+      logo: "/PalashVani.png",
+      name: "PalashVani - Hindi to Mundari Translation Platform",
+      Link: "https://palashvani-sih26042.vercel.app",
+      adminLink: "https://palashvani-sih26042-admin.vercel.app/", // ADDED ADMIN LINK
+      sourceCodeLink: "https://github.com/Oliveya-15/PalashVani-SIH26042",
+      description: "AI-powered Hindi to Mundari translation tool built for SIH 2026. Features hybrid translation, OCR scanning, and an offline-capable dictionary."
+    },
+    {
+      id: 6,
+      logo: "/CPP.png",
+      name: "Centralized Placement Portal (CPP)",
+      Link: "https://centralized-placement-portal.vercel.app",
+      sourceCodeLink: "https://github.com/Oliveya-15/Centralized-placement-portal",
+      description: "Full-stack portal connecting students and placement cells (TPO). Features a live job feed, application tracker, and an AI Placement Copilot."
+    },
+    {
+      id: 7,
       logo: "/Ask_Me.png",
       name: "Ask Me",
       Link: "https://ask-me-sage-kappa.vercel.app/",
@@ -52,7 +72,7 @@ function Projects() {
       description: "An AI-powered content creation platform offering tools for article writing, blog titles, image generation, image editing, and resume reviews."
     },
     {
-      id: 6,
+      id: 8,
       logo: "/bookwook.png",
       name: "BookWook - Book Reading Platform",
       Link: "https://bookwookweb-frontend.onrender.com/",
@@ -61,7 +81,7 @@ function Projects() {
         "MERN-based platform for book lovers to read free and paid books online, with login authentication and dark/light mode.",
     },
     {
-      id: 7,
+      id: 9,
       logo: "/snake.png",
       name: "Snake Game",
       Link: "https://oliveya-15.github.io/SnakeGame_Python/",
@@ -71,7 +91,7 @@ function Projects() {
         "Visually appealing Snake game built with Python, Pygame, and Pillow, featuring sound effects, image backgrounds, and adjustable levels.",
     },
     {
-      id: 8,
+      id: 10,
       logo: "/htmlproject.png",
       name: "Ecocean - Sustainable e-commerce website",
       Link: "https://sustainable-ecommerce-html-css-js.netlify.app/",
@@ -81,7 +101,7 @@ function Projects() {
         "Eco-friendly e-commerce website developed using HTML, CSS, and JavaScript with interactive product cards and Google Maps.",
     },
     {
-      id: 9,
+      id: 11,
       logo: "/gtnthumb.png",
       name: "Game - Guess The Number",
       Link: "https://oliveya-15.github.io/GUESS-THE-NUMBER/",
@@ -91,7 +111,7 @@ function Projects() {
         "Number guessing game built in Python with Tkinter, including voice assistance, hints, timer, levels, and dynamic GUI.",
     },
     {
-      id: 10,
+      id: 12,
       logo: "/amazon.png",
       name: "Amazon Clone - Landing Page",
       Link: "https://amazon-clonesite-html-css.netlify.app/",
@@ -137,6 +157,7 @@ function Projects() {
                 logo,
                 name,
                 Link,
+                adminLink, // ADDED THIS
                 sourceCodeLink,
                 description,
                 comingSoon,
@@ -181,7 +202,7 @@ function Projects() {
                     </div>
 
                     {!comingSoon && (
-                      <div className="pt-4 border-t border-gray-100 flex items-center justify-between mt-auto">
+                      <div className="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 mt-auto">
                         <a
                           href={Link}
                           target="_blank"
@@ -192,11 +213,24 @@ function Projects() {
                           <FaExternalLinkAlt className="text-xs" />
                         </a>
 
+                        {/* ADDED ADMIN PANEL BUTTON */}
+                        {adminLink && (
+                          <a
+                            href={adminLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 text-white font-medium text-sm shadow-md shadow-pink-500/20 hover:shadow-lg hover:shadow-pink-500/30 hover:scale-105 active:scale-95 transition-all duration-200"
+                          >
+                            <span>Admin Panel</span>
+                            <FaExternalLinkAlt className="text-xs" />
+                          </a>
+                        )}
+
                         <a
                           href={sourceCodeLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-white text-gray-700 border border-indigo-200 font-medium text-sm hover:bg-indigo-50/50 hover:border-indigo-400 hover:text-indigo-700 transition-all duration-200 shadow-sm"
+                          className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-white text-gray-700 border border-indigo-200 font-medium text-sm hover:bg-indigo-50/50 hover:border-indigo-400 hover:text-indigo-700 transition-all duration-200 shadow-sm ml-auto"
                         >
                           <FaGithub className="text-base" />
                           <span>Source Code</span>
@@ -226,6 +260,7 @@ function Projects() {
                 logo,
                 name,
                 Link,
+                adminLink, // ADDED THIS SO PALASHVANI CAN ACCESS ITS ADMIN LINK
                 sourceCodeLink,
                 description,
               }) => (
@@ -258,22 +293,35 @@ function Projects() {
                       </p>
                     </div>
 
-                    <div className="pt-3 border-t border-gray-100 flex items-center justify-between mt-auto gap-2">
+                    <div className="pt-3 border-t border-gray-100 flex flex-wrap items-center justify-between mt-auto gap-2">
                       <a
                         href={Link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center space-x-1.5 px-3 py-2 rounded-xl bg-indigo-50 text-indigo-700 font-medium text-xs hover:bg-indigo-600 hover:text-white transition-all duration-200"
+                        className="flex-1 min-w-[70px] inline-flex items-center justify-center space-x-1.5 px-2 py-2 rounded-xl bg-indigo-50 text-indigo-700 font-medium text-xs hover:bg-indigo-600 hover:text-white transition-all duration-200"
                       >
                         <span>Demo</span>
                         <FaExternalLinkAlt className="text-[10px]" />
                       </a>
 
+                      {/* CONDITIONAL ADMIN BUTTON FOR BASIC PROJECTS (PALASHVANI) */}
+                      {adminLink && (
+                        <a
+                          href={adminLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 min-w-[70px] inline-flex items-center justify-center space-x-1.5 px-2 py-2 rounded-xl bg-purple-50 text-purple-600 font-medium text-xs hover:bg-purple-600 hover:text-white transition-all duration-200"
+                        >
+                          <span>Admin</span>
+                          <FaExternalLinkAlt className="text-[10px]" />
+                        </a>
+                      )}
+
                       <a
                         href={sourceCodeLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center space-x-1.5 px-3 py-2 rounded-xl bg-white text-gray-700 border border-gray-200 font-medium text-xs hover:bg-gray-50 hover:border-indigo-300 transition-all duration-200"
+                        className="flex-1 min-w-[70px] inline-flex items-center justify-center space-x-1.5 px-2 py-2 rounded-xl bg-white text-gray-700 border border-gray-200 font-medium text-xs hover:bg-gray-50 hover:border-indigo-300 transition-all duration-200"
                       >
                         <FaGithub className="text-sm" />
                         <span>Code</span>
