@@ -49,7 +49,7 @@ function Projects() {
     {
       id: 5,
       logo: "/PalashVani.png",
-      name: "PalashVani - Hindi to Mundari Translation Platform",
+      name: "PalashVani - Translation Platform",
       Link: "https://palashvani-sih26042.vercel.app",
       adminLink: "https://palashvani-sih26042-admin.vercel.app/", // ADDED ADMIN LINK
       sourceCodeLink: "https://github.com/Oliveya-15/PalashVani-SIH26042",

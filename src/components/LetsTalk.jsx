@@ -84,54 +84,68 @@ Certificates: https://drive.google.com/drive/folders/1v2uVrYa7PrE51HBsf_40-kODyG
 Programming Languages: Python, JavaScript, C
 Frontend: HTML5, CSS3, React.js, Tailwind CSS, Responsive Web Design
 Backend & Databases: Node.js, Express.js, MongoDB, SQL, DBMS
-Machine Learning & AI: Scikit-learn, Pandas, NumPy, Streamlit, Exploratory Data Analysis (EDA)
-Tools & Others: Git, GitHub, VS Code, Google Colab, Anaconda, Canva
+Machine Learning & AI: Scikit-learn, Pandas, NumPy, Streamlit, Exploratory Data Analysis (EDA), RAG (Retrieval-Augmented Generation), NLP, OCR
+Tools & Others: Git, GitHub, VS Code, Google Colab, Anaconda, Canva, Vercel, Render
 Core Subjects: DSA, DBMS, OOP, Operating Systems, Computer Networks, Cloud Computing
 
 --- Key Projects (with links) ---
-1. **Docify – Doctor Appointment Booking (MERN)** Full-stack platform with role-based authentication.  
+1. **Docify – Doctor Appointment Booking (MERN)** Full-stack platform with role-based authentication, real-time slot booking, and login/logout UI.  
    Tech: MongoDB, Express.js, React, Node.js, Tailwind CSS  
    Live: https://docify-frontend-yw8c.onrender.com/  
+   Admin Panel: https://docify-admin.onrender.com  
    Code: https://github.com/Oliveya-15/Docify_MERN_Deployed.git
 
-2. **Health Diagnosis ML Model** Predicts Parkinson’s, Heart Disease, Diabetes with ~85% accuracy.  
+2. **PalashVani – Translation Platform (SIH 2026)** AI-powered Hindi to Mundari translation tool built for Smart India Hackathon 2026. Features hybrid translation, OCR scanning, and an offline-capable dictionary.  
+   Live: https://palashvani-sih26042.vercel.app  
+   Admin Panel: https://palashvani-sih26042-admin.vercel.app/  
+   Code: https://github.com/Oliveya-15/PalashVani-SIH26042
+
+3. **Centralized Placement Portal (CPP)** Full-stack portal connecting students and placement cells (TPO). Features a live job feed, application tracker, and an AI Placement Copilot.  
+   Live: https://centralized-placement-portal.vercel.app  
+   Code: https://github.com/Oliveya-15/Centralized-placement-portal
+
+4. **Ask Me – AI Content Creation Platform** An AI-powered content creation platform offering tools for article writing, blog titles, image generation, image editing, and resume reviews.  
+   Live: https://ask-me-sage-kappa.vercel.app/  
+   Code: https://github.com/Oliveya-15/Ask_ME
+
+5. **Talkify V2.0 – Chat with your Documents** An AI-powered document intelligence app that lets users upload files and interactively chat with their content via hybrid RAG search and verifiable citations.  
+   Tech: Streamlit + AI (RAG)  
+   Live: https://talkify-v2-0.vercel.app/  
+   Code: https://github.com/Oliveya-15/Talkify-V2.0
+
+6. **Health Diagnosis ML Model** Predicts Parkinson’s, Heart Disease, Diabetes with ~85% accuracy.  
    Tech: Python, Scikit-learn, Streamlit  
-   Live: https://healthdiagnosismodel.streamlit.app/  
+   Live: https://healthdiagnosismodel-k6wpmkpe5tbofpydzkdjxa.streamlit.app/  
    Code: https://github.com/Oliveya-15/HealthDiagnosisModel.git
 
-3. **Talkify – Chat with PDFs** AI-powered app to upload PDFs and chat with content.  
-   Tech: Streamlit + AI  
-   Live: https://talkify.streamlit.app/  
-   Code: https://github.com/Oliveya-15/Talkify-Deployed
-
-4. **BookWook – Digital Reading Platform** MERN platform for book lovers to read free/paid books, login auth, dark/light mode.  
+7. **BookWook – Digital Reading Platform** MERN platform for book lovers to read free/paid books, login auth, dark/light mode.  
    Live: https://bookwookweb-frontend.onrender.com/  
    Code: https://github.com/Oliveya-15/BookWookWeb
 
-5. **Ecocean – Sustainable E-Commerce** Responsive frontend for eco-friendly products.  
+8. **Ecocean – Sustainable E-Commerce** Responsive frontend for eco-friendly products with interactive product cards and Google Maps.  
    Tech: HTML5, CSS3, JavaScript  
    Live: https://sustainable-ecommerce-html-css-js.netlify.app/  
    Code: https://github.com/Oliveya-15/EcommerceApp.git
 
-6. **Classic Snake Game (Python)** Retro Snake game with sound, levels, Pygame.  
+9. **Classic Snake Game (Python)** Retro Snake game with sound, levels, Pygame.  
    Live: https://oliveya-15.github.io/SnakeGame_Python/  
    Code: https://github.com/Oliveya-15/SnakeGame_Python.git
 
-7. **Weather Forecast Web App** Fetches current weather using OpenWeatherMap API.  
-   Tech: HTML, CSS, JavaScript (Vanilla)  
-   Live: https://weatherapp-yw8c.onrender.com/  
-   Code: https://github.com/Oliveya-15/WeatherApp.git
+10. **Weather Forecast Web App** Fetches current weather using OpenWeatherMap API.  
+    Tech: HTML, CSS, JavaScript (Vanilla)  
+    Live: https://weatherapp-yw8c.onrender.com/  
+    Code: https://github.com/Oliveya-15/WeatherApp.git
 
-8. **Personal Finance Assistant (PFA)** Python script with NLP (NLTK) for financial advice.  
-   Live: https://financeassistant.streamlit.app/  
-   Code: https://github.com/Oliveya-15/PersonalFinanceAssistant.git
+11. **Personal Finance Assistant (PFA)** Python script with NLP (NLTK) for financial advice.  
+    Live: https://financeassistant.streamlit.app/  
+    Code: https://github.com/Oliveya-15/PersonalFinanceAssistant.git
 
-9. **Amazon Clone – Landing Page** (Basic)  
-   HTML/CSS clone.  
-   Live: https://amazon-clonesite-html-css.netlify.app/  
-   Code: https://github.com/Oliveya-15/AmazonColne_HTMLCSS.git
+12. **Amazon Clone – Landing Page** (Basic)  
+    HTML/CSS clone.  
+    Live: https://amazon-clonesite-html-css.netlify.app/  
+    Code: https://github.com/Oliveya-15/AmazonColne_HTMLCSS.git
 
-10. **Guess The Number Game** Python + Tkinter game with voice assistance, hints, timer, levels.  
+13. **Guess The Number Game** Python + Tkinter game with voice assistance, hints, timer, levels.  
     Live: https://oliveya-15.github.io/GUESS-THE-NUMBER/  
     Code: https://github.com/Oliveya-15/GUESS-THE-NUMBER.git
 
@@ -140,6 +154,7 @@ Core Subjects: DSA, DBMS, OOP, Operating Systems, Computer Networks, Cloud Compu
 - Led multiple technical and cultural college events end-to-end
 - Awarded in creative and academic competitions at college level
 - 5-Star Python on HackerRank | Multiple industry certifications
+- Built and shipped 13+ projects, including a Smart India Hackathon 2026 build (PalashVani)
 
 --- Professional Objective ---
 To secure a challenging internship where I can apply my full-stack development, Machine Learning, and AI skills to deliver impactful solutions while continuously growing in a professional environment.
