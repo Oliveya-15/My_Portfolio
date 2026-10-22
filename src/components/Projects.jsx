@@ -7,7 +7,7 @@ function Projects() {
       id: 1,
       logo: "/docify.png",
       name: "Docify Doctor Appointment Booking App - MERN",
-      Link: "https://docify-frontend-yw8c.onrender.com/",
+      Link: "https://docify-frontend-yw8c.onrender.com",
       adminLink: "https://docify-admin.onrender.com", // ADDED ADMIN LINK
       sourceCodeLink: "https://github.com/Oliveya-15/Docify_MERN_Deployed.git",
       description:
@@ -17,31 +17,28 @@ function Projects() {
       id: 2,
       logo: "/talkify.png",
       name: "Talkify - Chat with your Documents",
-      Link: "https://talkify-v2-0.vercel.app/",
+      Link: "https://talkify-v2-0.vercel.app",
       sourceCodeLink: "https://github.com/Oliveya-15/Talkify-V2.0",
       description:
         "An AI-powered document intelligence app that lets users upload files and interactively chat with their content via hybrid RAG search and verifiable citations.",
     },
     {
       id: 3,
-      logo: "/ml.png",
-      name: "Health Diagnosis ML Model",
-      Link: "https://healthdiagnosismodel-k6wpmkpe5tbofpydzkdjxa.streamlit.app/",
-      sourceCodeLink:
-        "https://github.com/Oliveya-15/HealthDiagnosisModel.git",
+      logo: "/Vital_AI.png",
+      name: "VitalAI - AI Health Screening & Emergency Platform",
+      Link: "https://vital-ai-tau.vercel.app",
+      sourceCodeLink: "https://github.com/Oliveya-15/VitalAI",
       description:
-        "Health diagnosis model using Google Colab, Streamlit, and Spyder, predicting Parkinson's, heart disease, and diabetes with 85% accuracy.",
+        "An AI-powered health screening, assistance, blood-donor network & emergency coordination platform featuring explainable ML risk prediction and RAG-based health assistant.",
     },
-    // --- NEW PROJECTS ADDED HERE ---
-
     {
       id: 4,
-      logo: "",
-      name: "",
-      Link: "",
-      sourceCodeLink: "",
-      description: "",
-      comingSoon: true,
+      logo: "/NeceCity.png",
+      name: "NeceCity - AI Urban Infrastructure Monitoring",
+      Link: "https://nece-city.vercel.app",
+      sourceCodeLink: "https://github.com/Oliveya-15/NeceCity",
+      description:
+        "An AI-powered urban infrastructure monitoring & decision-support system featuring local YOLOv8 computer vision detection, explainable risk scoring, and geospatial analytics.",
     },
   ];
 
@@ -57,6 +54,14 @@ function Projects() {
     },
     {
       id: 6,
+      logo: "/ml.png",
+      name: "Health Diagnosis ML Model",
+      Link: "https://healthdiagnosismodel-k6wpmkpe5tbofpydzkdjxa.streamlit.app/",
+      sourceCodeLink: "https://github.com/Oliveya-15/HealthDiagnosisModel.git",
+      description: "Health diagnosis model using Google Colab, Streamlit, and Spyder, predicting Parkinson's, heart disease, and diabetes with 85% accuracy."
+    },
+    {
+      id: 7,
       logo: "/CPP.png",
       name: "Centralized Placement Portal (CPP)",
       Link: "https://centralized-placement-portal.vercel.app",
@@ -64,7 +69,7 @@ function Projects() {
       description: "Full-stack portal connecting students and placement cells (TPO). Features a live job feed, application tracker, and an AI Placement Copilot."
     },
     {
-      id: 7,
+      id: 8,
       logo: "/Ask_Me.png",
       name: "Ask Me",
       Link: "https://ask-me-sage-kappa.vercel.app/",
@@ -72,7 +77,7 @@ function Projects() {
       description: "An AI-powered content creation platform offering tools for article writing, blog titles, image generation, image editing, and resume reviews."
     },
     {
-      id: 8,
+      id: 9,
       logo: "/bookwook.png",
       name: "BookWook - Book Reading Platform",
       Link: "https://bookwookweb-frontend.onrender.com/",
@@ -81,7 +86,7 @@ function Projects() {
         "MERN-based platform for book lovers to read free and paid books online, with login authentication and dark/light mode.",
     },
     {
-      id: 9,
+      id: 10,
       logo: "/snake.png",
       name: "Snake Game",
       Link: "https://oliveya-15.github.io/SnakeGame_Python/",
@@ -91,7 +96,7 @@ function Projects() {
         "Visually appealing Snake game built with Python, Pygame, and Pillow, featuring sound effects, image backgrounds, and adjustable levels.",
     },
     {
-      id: 10,
+      id: 11,
       logo: "/htmlproject.png",
       name: "Ecocean - Sustainable e-commerce website",
       Link: "https://sustainable-ecommerce-html-css-js.netlify.app/",
@@ -101,7 +106,7 @@ function Projects() {
         "Eco-friendly e-commerce website developed using HTML, CSS, and JavaScript with interactive product cards and Google Maps.",
     },
     {
-      id: 11,
+      id: 12,
       logo: "/gtnthumb.png",
       name: "Game - Guess The Number",
       Link: "https://oliveya-15.github.io/GUESS-THE-NUMBER/",
@@ -111,7 +116,7 @@ function Projects() {
         "Number guessing game built in Python with Tkinter, including voice assistance, hints, timer, levels, and dynamic GUI.",
     },
     {
-      id: 12,
+      id: 13,
       logo: "/amazon.png",
       name: "Amazon Clone - Landing Page",
       Link: "https://amazon-clonesite-html-css.netlify.app/",
