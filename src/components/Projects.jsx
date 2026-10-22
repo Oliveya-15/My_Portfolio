@@ -54,11 +54,12 @@ function Projects() {
     },
     {
       id: 6,
-      logo: "/ml.png",
-      name: "Health Diagnosis ML Model",
-      Link: "https://healthdiagnosismodel-k6wpmkpe5tbofpydzkdjxa.streamlit.app/",
-      sourceCodeLink: "https://github.com/Oliveya-15/HealthDiagnosisModel.git",
-      description: "Health diagnosis model using Google Colab, Streamlit, and Spyder, predicting Parkinson's, heart disease, and diabetes with 85% accuracy."
+      logo: "/Utsaah.png",
+      name: "Utsaah — E-Commerce Platform",
+      Link: "https://utsaah.vercel.app/",
+      adminLink: "https://utsaah-admin.vercel.app/",
+      sourceCodeLink: "https://github.com/Oliveya-15/Utsaah-V1.0",
+      description: "Full-stack MERN e-commerce platform for handcrafted products with customer storefront, separate admin dashboard, wallet system, and custom orders."
     },
     {
       id: 7,
@@ -78,6 +79,14 @@ function Projects() {
     },
     {
       id: 9,
+      logo: "/ml.png",
+      name: "Health Diagnosis ML Model",
+      Link: "https://healthdiagnosismodel-k6wpmkpe5tbofpydzkdjxa.streamlit.app/",
+      sourceCodeLink: "https://github.com/Oliveya-15/HealthDiagnosisModel.git",
+      description: "Health diagnosis model using Google Colab, Streamlit, and Spyder, predicting Parkinson's, heart disease, and diabetes with 85% accuracy."
+    },
+    {
+      id: 10,
       logo: "/bookwook.png",
       name: "BookWook - Book Reading Platform",
       Link: "https://bookwookweb-frontend.onrender.com/",
@@ -86,7 +95,7 @@ function Projects() {
         "MERN-based platform for book lovers to read free and paid books online, with login authentication and dark/light mode.",
     },
     {
-      id: 10,
+      id: 11,
       logo: "/snake.png",
       name: "Snake Game",
       Link: "https://oliveya-15.github.io/SnakeGame_Python/",
@@ -96,7 +105,7 @@ function Projects() {
         "Visually appealing Snake game built with Python, Pygame, and Pillow, featuring sound effects, image backgrounds, and adjustable levels.",
     },
     {
-      id: 11,
+      id: 12,
       logo: "/htmlproject.png",
       name: "Ecocean - Sustainable e-commerce website",
       Link: "https://sustainable-ecommerce-html-css-js.netlify.app/",
@@ -106,7 +115,7 @@ function Projects() {
         "Eco-friendly e-commerce website developed using HTML, CSS, and JavaScript with interactive product cards and Google Maps.",
     },
     {
-      id: 12,
+      id: 13,
       logo: "/gtnthumb.png",
       name: "Game - Guess The Number",
       Link: "https://oliveya-15.github.io/GUESS-THE-NUMBER/",
@@ -115,7 +124,7 @@ function Projects() {
       description:
         "Number guessing game built in Python with Tkinter, including voice assistance, hints, timer, levels, and dynamic GUI.",
     },
-    {
+    {/* {
       id: 13,
       logo: "/amazon.png",
       name: "Amazon Clone - Landing Page",
@@ -124,7 +133,7 @@ function Projects() {
         "https://github.com/Oliveya-15/AmazonColne_HTMLCSS.git",
       description:
         "Basic Amazon landing page clone developed with HTML and CSS, showcasing fundamental understanding.",
-    },
+    }, */}
   ];
 
   return (
