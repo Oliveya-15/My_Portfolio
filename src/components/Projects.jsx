@@ -124,6 +124,7 @@ function Projects() {
       description:
         "Number guessing game built in Python with Tkinter, including voice assistance, hints, timer, levels, and dynamic GUI.",
     },
+  ];
     {/* {
       id: 13,
       logo: "/amazon.png",
@@ -134,8 +135,7 @@ function Projects() {
       description:
         "Basic Amazon landing page clone developed with HTML and CSS, showcasing fundamental understanding.",
     }, */}
-  ];
-
+  
   return (
     <div
       name="Projects"
