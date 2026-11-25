@@ -17,18 +17,23 @@ const groq = new Groq({
 
 // HELPER FUNCTION TO DYNAMICALLY CREATE PROJECT STRING
 const generateProjectsText = () => {
-  const allProjects = [...cardItem, ...basicCardItem];
-  
-  return allProjects.map((project, index) => {
-    let text = `${index + 1}. **${project.name}**\n`;
-    text += `   Description: ${project.description}\n`;
-    
-    if (project.Link) text += `   Live: ${project.Link}\n`;
-    if (project.adminLink) text += `   Admin Panel: ${project.adminLink}\n`;
-    if (project.sourceCodeLink) text += `   Code: ${project.sourceCodeLink}\n`;
-    
+  const featured = cardItem.map((p, i) => {
+    let text = `${i + 1}. **${p.name}**\n   Description: ${p.description}\n`;
+    if (p.Link) text += `   Live: ${p.Link}\n`;
+    if (p.adminLink) text += `   Admin Panel: ${p.adminLink}\n`;
+    if (p.sourceCodeLink) text += `   Code: ${p.sourceCodeLink}\n`;
     return text;
   }).join('\n');
+
+  const additional = basicCardItem.map((p, i) => {
+    let text = `${i + 5}. **${p.name}**\n   Description: ${p.description}\n`;
+    if (p.Link) text += `   Live: ${p.Link}\n`;
+    if (p.adminLink) text += `   Admin Panel: ${p.adminLink}\n`;
+    if (p.sourceCodeLink) text += `   Code: ${p.sourceCodeLink}\n`;
+    return text;
+  }).join('\n');
+
+  return `### Featured Projects\n${featured}\n\n### Additional Projects\n${additional}`;
 };
 
 function LetsTalk() {
@@ -41,10 +46,15 @@ function LetsTalk() {
   
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef(null);
+  
+  // CHANGED: Use a ref for the chat container instead of the end of the messages
+  const chatContainerRef = useRef(null);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // CHANGED: Scroll only the chat container, not the whole page
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
   }, [messages, isLoading]);
 
   const sendMessage = async (e) => {
@@ -118,6 +128,8 @@ ${generateProjectsText()}
 To secure a challenging internship where I can apply my full-stack development, Machine Learning, and AI skills to deliver impactful solutions while continuously growing in a professional environment.
 
 **Important instructions:**
+- **CRITICAL PROJECT INSTRUCTION:** When the user asks to see, list, or talk about your projects, you must ONLY list the **4 Featured Projects** first. DO NOT list all the projects at once. Format the 4 projects beautifully using bullet points. At the very end of your response, explicitly ask the user: *"Would you like to see my additional projects as well?"*
+- If the user says "yes" or asks for more projects, ONLY THEN list the **Additional Projects**.
 - If the user asks something that is NOT listed in the above information (e.g., "What is my favorite color?"), respond politely: *"I'm not sure about that – could you please rephrase or ask something about my projects, skills, education, or experience?"*
 - Never say "Sorry! I'm having trouble connecting right now" unless there is a real API error.
 - Always end your replies by inviting further conversation or asking if the user wants more details about any specific topic.`
@@ -128,7 +140,7 @@ To secure a challenging internship where I can apply my full-stack development, 
         messages: [systemPrompt, ...messages, userMessage],
         model: 'openai/gpt-oss-120b',
         temperature: 0.75,
-        max_tokens: 1024,
+        max_tokens: 2048, // INCREASED to prevent cutoffs
       });
 
       const botReply = response.choices[0]?.message?.content || 
@@ -201,7 +213,11 @@ To secure a challenging internship where I can apply my full-stack development, 
           </div>
 
           {/* Messages Body */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-5 bg-gradient-to-b from-indigo-50/20 to-transparent">
+          {/* CHANGED: Added chatContainerRef here and removed messagesEndRef from the bottom */}
+          <div 
+            ref={chatContainerRef}
+            className="flex-1 overflow-y-auto p-6 space-y-5 bg-gradient-to-b from-indigo-50/20 to-transparent"
+          >
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex items-start gap-3 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 {msg.role === 'assistant' && (
@@ -259,7 +275,6 @@ To secure a challenging internship where I can apply my full-stack development, 
                 </div>
               </div>
             )}
-            <div ref={messagesEndRef} />
           </div>
 
           {/* Input Footer Form */}
