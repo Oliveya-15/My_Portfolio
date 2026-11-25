@@ -3,6 +3,7 @@ import Groq from 'groq-sdk';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { FaComments, FaPaperPlane } from 'react-icons/fa';
+import { cardItem, basicCardItem } from './Projects'; // IMPORTED FROM PROJECTS.JSX
 
 const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 if (!apiKey) {
@@ -13,6 +14,22 @@ const groq = new Groq({
   apiKey: apiKey,
   dangerouslyAllowBrowser: true,
 });
+
+// HELPER FUNCTION TO DYNAMICALLY CREATE PROJECT STRING
+const generateProjectsText = () => {
+  const allProjects = [...cardItem, ...basicCardItem];
+  
+  return allProjects.map((project, index) => {
+    let text = `${index + 1}. **${project.name}**\n`;
+    text += `   Description: ${project.description}\n`;
+    
+    if (project.Link) text += `   Live: ${project.Link}\n`;
+    if (project.adminLink) text += `   Admin Panel: ${project.adminLink}\n`;
+    if (project.sourceCodeLink) text += `   Code: ${project.sourceCodeLink}\n`;
+    
+    return text;
+  }).join('\n');
+};
 
 function LetsTalk() {
   const [messages, setMessages] = useState([
@@ -89,54 +106,7 @@ Tools & Others: Git, GitHub, VS Code, Google Colab, Anaconda, Canva
 Core Subjects: DSA, DBMS, OOP, Operating Systems, Computer Networks, Cloud Computing
 
 --- Key Projects (with links) ---
-1. **Docify – Doctor Appointment Booking (MERN)** Full-stack platform with role-based authentication and admin panel.  
-   Tech: MongoDB, Express.js, React, Node.js, Tailwind CSS  
-   Live: https://docify-frontend-yw8c.onrender.com/  
-   Admin Panel: https://docify-admin.onrender.com  
-   Code: https://github.com/Oliveya-15/Docify_MERN_Deployed.git
-
-2. **Talkify – Chat with your Documents** AI-powered document intelligence app with hybrid RAG search and verifiable citations.  
-   Live: https://talkify-v2-0.vercel.app/  
-   Code: https://github.com/Oliveya-15/Talkify-V2.0
-
-3. **Health Diagnosis ML Model** Predicts Parkinson’s, Heart Disease, Diabetes with 85% accuracy.  
-   Tech: Python, Google Colab, Streamlit, Spyder  
-   Live: https://healthdiagnosismodel-k6wpmkpe5tbofpydzkdjxa.streamlit.app/  
-   Code: https://github.com/Oliveya-15/HealthDiagnosisModel.git
-
-4. **PalashVani – Translation Platform** AI-powered Hindi to Mundari translation tool built for SIH 2026. Features hybrid translation, OCR scanning, and offline-capable dictionary.  
-   Live: https://palashvani-sih26042.vercel.app  
-   Admin Panel: https://palashvani-sih26042-admin.vercel.app/  
-   Code: https://github.com/Oliveya-15/PalashVani-SIH26042
-
-5. **Centralized Placement Portal (CPP)** Full-stack portal connecting students and placement cells (TPO) with a live job feed, application tracker, and AI Placement Copilot.  
-   Live: https://centralized-placement-portal.vercel.app  
-   Code: https://github.com/Oliveya-15/Centralized-placement-portal
-
-6. **Ask Me** AI-powered content creation platform offering tools for article writing, blog titles, image generation, image editing, and resume reviews.  
-   Live: https://ask-me-sage-kappa.vercel.app/  
-   Code: https://github.com/Oliveya-15/Ask_ME
-
-7. **BookWook – Book Reading Platform** MERN-based platform for book lovers to read free and paid books online, with login authentication and dark/light mode.  
-   Live: https://bookwookweb-frontend.onrender.com/  
-   Code: https://github.com/Oliveya-15/BookWookWeb
-
-8. **Ecocean – Sustainable E-Commerce** Responsive frontend for eco-friendly products.  
-   Tech: HTML5, CSS3, JavaScript  
-   Live: https://sustainable-ecommerce-html-css-js.netlify.app/  
-   Code: https://github.com/Oliveya-15/EcommerceApp.git
-
-9. **Classic Snake Game (Python)** Retro Snake game with sound effects, image backgrounds, adjustable levels.  
-   Live: https://oliveya-15.github.io/SnakeGame_Python/  
-   Code: https://github.com/Oliveya-15/SnakeGame_Python.git
-
-10. **Guess The Number Game** Python + Tkinter game with voice assistance, hints, timer, levels, and dynamic GUI.  
-    Live: https://oliveya-15.github.io/GUESS-THE-NUMBER/  
-    Code: https://github.com/Oliveya-15/GUESS-THE-NUMBER.git
-
-11. **Amazon Clone – Landing Page** Basic Amazon landing page clone developed with HTML and CSS.  
-    Live: https://amazon-clonesite-html-css.netlify.app/  
-    Code: https://github.com/Oliveya-15/AmazonColne_HTMLCSS.git
+${generateProjectsText()}
 
 --- Achievements ---
 - Consistent Academic Excellence – BCA CGPA 8.94 | MCA YGPA 8.66

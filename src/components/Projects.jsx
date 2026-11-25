@@ -1,141 +1,133 @@
 import React from "react";
 import { FaExternalLinkAlt, FaGithub, FaTools } from "react-icons/fa";
 
-function Projects() {
-  const cardItem = [
-    {
-      id: 1,
-      logo: "/docify.png",
-      name: "Docify Doctor Appointment Booking App - MERN",
-      Link: "https://docify-frontend-yw8c.onrender.com",
-      adminLink: "https://docify-admin.onrender.com", // ADDED ADMIN LINK
-      sourceCodeLink: "https://github.com/Oliveya-15/Docify_MERN_Deployed.git",
-      description:
-        "Responsive frontend for doctor appointments using React and Tailwind, with real-time slot booking and login/logout UI.",
-    },
-    {
-      id: 2,
-      logo: "/talkify.png",
-      name: "Talkify - Chat with your Documents",
-      Link: "https://talkify-v2-0.vercel.app",
-      sourceCodeLink: "https://github.com/Oliveya-15/Talkify-V2.0",
-      description:
-        "An AI-powered document intelligence app that lets users upload files and interactively chat with their content via hybrid RAG search and verifiable citations.",
-    },
-    {
-      id: 3,
-      logo: "/Vital_AI.png",
-      name: "VitalAI - AI Health Screening & Emergency Platform",
-      Link: "https://vital-ai-tau.vercel.app",
-      sourceCodeLink: "https://github.com/Oliveya-15/VitalAI",
-      description:
-        "An AI-powered health screening, assistance, blood-donor network & emergency coordination platform featuring explainable ML risk prediction and RAG-based health assistant.",
-    },
-    {
-      id: 4,
-      logo: "/NeceCity.png",
-      name: "NeceCity - AI Urban Infrastructure Monitoring",
-      Link: "https://nece-city.vercel.app",
-      sourceCodeLink: "https://github.com/Oliveya-15/NeceCity",
-      description:
-        "An AI-powered urban infrastructure monitoring & decision-support system featuring local YOLOv8 computer vision detection, explainable risk scoring, and geospatial analytics.",
-    },
-  ];
+// MOVED OUTSIDE THE COMPONENT AND ADDED EXPORT
+export const cardItem = [
+  {
+    id: 1,
+    logo: "/docify.png",
+    name: "Docify Doctor Appointment Booking App - MERN",
+    Link: "https://docify-frontend-yw8c.onrender.com",
+    adminLink: "https://docify-admin.onrender.com", 
+    sourceCodeLink: "https://github.com/Oliveya-15/Docify_MERN_Deployed.git",
+    description:
+      "Responsive frontend for doctor appointments using React and Tailwind, with real-time slot booking and login/logout UI.",
+  },
+  {
+    id: 2,
+    logo: "/talkify.png",
+    name: "Talkify - Chat with your Documents",
+    Link: "https://talkify-v2-0.vercel.app",
+    sourceCodeLink: "https://github.com/Oliveya-15/Talkify-V2.0",
+    description:
+      "An AI-powered document intelligence app that lets users upload files and interactively chat with their content via hybrid RAG search and verifiable citations.",
+  },
+  {
+    id: 3,
+    logo: "/Vital_AI.png",
+    name: "VitalAI - AI Health Screening & Emergency Platform",
+    Link: "https://vital-ai-tau.vercel.app",
+    sourceCodeLink: "https://github.com/Oliveya-15/VitalAI",
+    description:
+      "An AI-powered health screening, assistance, blood-donor network & emergency coordination platform featuring explainable ML risk prediction and RAG-based health assistant.",
+  },
+  {
+    id: 4,
+    logo: "/NeceCity.png",
+    name: "NeceCity - AI Urban Infrastructure Monitoring",
+    Link: "https://nece-city.vercel.app",
+    sourceCodeLink: "https://github.com/Oliveya-15/NeceCity",
+    description:
+      "An AI-powered urban infrastructure monitoring & decision-support system featuring local YOLOv8 computer vision detection, explainable risk scoring, and geospatial analytics.",
+  },
+];
 
-  const basicCardItem = [
-    {
-      id: 5,
-      logo: "/PalashVani.png",
-      name: "PalashVani - Translation Platform",
-      Link: "https://palashvani-sih26042.vercel.app",
-      adminLink: "https://palashvani-sih26042-admin.vercel.app/", // ADDED ADMIN LINK
-      sourceCodeLink: "https://github.com/Oliveya-15/PalashVani-SIH26042",
-      description: "AI-powered Hindi to Mundari translation tool built for SIH 2026. Features hybrid translation, OCR scanning, and an offline-capable dictionary."
-    },
-    {
-      id: 6,
-      logo: "/Utsaah.png",
-      name: "Utsaah — E-Commerce Platform",
-      Link: "https://utsaah.vercel.app/",
-      adminLink: "https://utsaah-admin.vercel.app/",
-      sourceCodeLink: "https://github.com/Oliveya-15/Utsaah-V1.0",
-      description: "Full-stack MERN e-commerce platform for handcrafted products with customer storefront, separate admin dashboard, wallet system, and custom orders."
-    },
-    {
-      id: 7,
-      logo: "/CPP.png",
-      name: "Centralized Placement Portal (CPP)",
-      Link: "https://centralized-placement-portal.vercel.app",
-      sourceCodeLink: "https://github.com/Oliveya-15/Centralized-placement-portal",
-      description: "Full-stack portal connecting students and placement cells (TPO). Features a live job feed, application tracker, and an AI Placement Copilot."
-    },
-    {
-      id: 8,
-      logo: "/Ask_Me.png",
-      name: "Ask Me",
-      Link: "https://ask-me-sage-kappa.vercel.app/",
-      sourceCodeLink: "https://github.com/Oliveya-15/Ask_ME",
-      description: "An AI-powered content creation platform offering tools for article writing, blog titles, image generation, image editing, and resume reviews."
-    },
-    {
-      id: 9,
-      logo: "/ml.png",
-      name: "Health Diagnosis ML Model",
-      Link: "https://healthdiagnosismodel-k6wpmkpe5tbofpydzkdjxa.streamlit.app/",
-      sourceCodeLink: "https://github.com/Oliveya-15/HealthDiagnosisModel.git",
-      description: "Health diagnosis model using Google Colab, Streamlit, and Spyder, predicting Parkinson's, heart disease, and diabetes with 85% accuracy."
-    },
-    {
-      id: 10,
-      logo: "/bookwook.png",
-      name: "BookWook - Book Reading Platform",
-      Link: "https://bookwookweb-frontend.onrender.com/",
-      sourceCodeLink: "https://github.com/Oliveya-15/BookWookWeb",
-      description:
-        "MERN-based platform for book lovers to read free and paid books online, with login authentication and dark/light mode.",
-    },
-    {
-      id: 11,
-      logo: "/snake.png",
-      name: "Snake Game",
-      Link: "https://oliveya-15.github.io/SnakeGame_Python/",
-      sourceCodeLink:
-        "https://github.com/Oliveya-15/SnakeGame_Python.git",
-      description:
-        "Visually appealing Snake game built with Python, Pygame, and Pillow, featuring sound effects, image backgrounds, and adjustable levels.",
-    },
-    {
-      id: 12,
-      logo: "/htmlproject.png",
-      name: "Ecocean - Sustainable e-commerce website",
-      Link: "https://sustainable-ecommerce-html-css-js.netlify.app/",
-      sourceCodeLink:
-        "https://github.com/Oliveya-15/EcommerceApp.git",
-      description:
-        "Eco-friendly e-commerce website developed using HTML, CSS, and JavaScript with interactive product cards and Google Maps.",
-    },
-    {
-      id: 13,
-      logo: "/gtnthumb.png",
-      name: "Game - Guess The Number",
-      Link: "https://oliveya-15.github.io/GUESS-THE-NUMBER/",
-      sourceCodeLink:
-        "https://github.com/Oliveya-15/GUESS-THE-NUMBER.git",
-      description:
-        "Number guessing game built in Python with Tkinter, including voice assistance, hints, timer, levels, and dynamic GUI.",
-    },
-  ];
-    {/* {
-      id: 13,
-      logo: "/amazon.png",
-      name: "Amazon Clone - Landing Page",
-      Link: "https://amazon-clonesite-html-css.netlify.app/",
-      sourceCodeLink:
-        "https://github.com/Oliveya-15/AmazonColne_HTMLCSS.git",
-      description:
-        "Basic Amazon landing page clone developed with HTML and CSS, showcasing fundamental understanding.",
-    }, */}
-  
+// MOVED OUTSIDE THE COMPONENT AND ADDED EXPORT
+export const basicCardItem = [
+  {
+    id: 5,
+    logo: "/PalashVani.png",
+    name: "PalashVani - Translation Platform",
+    Link: "https://palashvani-sih26042.vercel.app",
+    adminLink: "https://palashvani-sih26042-admin.vercel.app/",
+    sourceCodeLink: "https://github.com/Oliveya-15/PalashVani-SIH26042",
+    description: "AI-powered Hindi to Mundari translation tool built for SIH 2026. Features hybrid translation, OCR scanning, and an offline-capable dictionary."
+  },
+  {
+    id: 6,
+    logo: "/Utsaah.png",
+    name: "Utsaah — E-Commerce Platform",
+    Link: "https://utsaah.vercel.app/",
+    adminLink: "https://utsaah-admin.vercel.app/",
+    sourceCodeLink: "https://github.com/Oliveya-15/Utsaah-V1.0",
+    description: "Full-stack MERN e-commerce platform for handcrafted products with customer storefront, separate admin dashboard, wallet system, and custom orders."
+  },
+  {
+    id: 7,
+    logo: "/CPP.png",
+    name: "Centralized Placement Portal (CPP)",
+    Link: "https://centralized-placement-portal.vercel.app",
+    sourceCodeLink: "https://github.com/Oliveya-15/Centralized-placement-portal",
+    description: "Full-stack portal connecting students and placement cells (TPO). Features a live job feed, application tracker, and an AI Placement Copilot."
+  },
+  {
+    id: 8,
+    logo: "/Ask_Me.png",
+    name: "Ask Me - All in One Saas Platform",
+    Link: "https://ask-me-sage-kappa.vercel.app/",
+    sourceCodeLink: "https://github.com/Oliveya-15/Ask_ME",
+    description: "An AI-powered content creation platform offering tools for article writing, blog titles, image generation, image editing, and resume reviews."
+  },
+  {
+    id: 9,
+    logo: "/ml.png",
+    name: "Health Diagnosis ML Model",
+    Link: "https://healthdiagnosismodel-k6wpmkpe5tbofpydzkdjxa.streamlit.app/",
+    sourceCodeLink: "https://github.com/Oliveya-15/HealthDiagnosisModel.git",
+    description: "Health diagnosis model using Google Colab, Streamlit, and Spyder, predicting Parkinson's, heart disease, and diabetes with 85% accuracy."
+  },
+  {
+    id: 10,
+    logo: "/bookwook.png",
+    name: "BookWook - Book Reading Platform",
+    Link: "https://bookwookweb-frontend.onrender.com/",
+    sourceCodeLink: "https://github.com/Oliveya-15/BookWookWeb",
+    description:
+      "MERN-based platform for book lovers to read free and paid books online, with login authentication and dark/light mode.",
+  },
+  {
+    id: 11,
+    logo: "/snake.png",
+    name: "Snake Game",
+    Link: "https://oliveya-15.github.io/SnakeGame_Python/",
+    sourceCodeLink:
+      "https://github.com/Oliveya-15/SnakeGame_Python.git",
+    description:
+      "Visually appealing Snake game built with Python, Pygame, and Pillow, featuring sound effects, image backgrounds, and adjustable levels.",
+  },
+  {
+    id: 12,
+    logo: "/htmlproject.png",
+    name: "Ecocean - Sustainable e-commerce website",
+    Link: "https://sustainable-ecommerce-html-css-js.netlify.app/",
+    sourceCodeLink:
+      "https://github.com/Oliveya-15/EcommerceApp.git",
+    description:
+      "Eco-friendly e-commerce website developed using HTML, CSS, and JavaScript with interactive product cards and Google Maps.",
+  },
+  {
+    id: 13,
+    logo: "/gtnthumb.png",
+    name: "Game - Guess The Number",
+    Link: "https://oliveya-15.github.io/GUESS-THE-NUMBER/",
+    sourceCodeLink:
+      "https://github.com/Oliveya-15/GUESS-THE-NUMBER.git",
+    description:
+      "Number guessing game built in Python with Tkinter, including voice assistance, hints, timer, levels, and dynamic GUI.",
+  },
+];
+
+function Projects() {
   return (
     <div
       name="Projects"
@@ -171,7 +163,7 @@ function Projects() {
                 logo,
                 name,
                 Link,
-                adminLink, // ADDED THIS
+                adminLink, 
                 sourceCodeLink,
                 description,
                 comingSoon,
@@ -227,7 +219,6 @@ function Projects() {
                           <FaExternalLinkAlt className="text-xs" />
                         </a>
 
-                        {/* ADDED ADMIN PANEL BUTTON */}
                         {adminLink && (
                           <a
                             href={adminLink}
@@ -274,7 +265,7 @@ function Projects() {
                 logo,
                 name,
                 Link,
-                adminLink, // ADDED THIS SO PALASHVANI CAN ACCESS ITS ADMIN LINK
+                adminLink, 
                 sourceCodeLink,
                 description,
               }) => (
@@ -318,7 +309,6 @@ function Projects() {
                         <FaExternalLinkAlt className="text-[10px]" />
                       </a>
 
-                      {/* CONDITIONAL ADMIN BUTTON FOR BASIC PROJECTS (PALASHVANI) */}
                       {adminLink && (
                         <a
                           href={adminLink}
